@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/zero-hungerlogo.png" type="image/x-icon">
+        <link rel="shortcut icon" href="images/zero-hungerlogo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar-container">
+        <img src="images/logo-zerohunger.png" alt="Logo" class="logo">
+        </nav>
+  
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="dashboard.html">
+            <input type="text" placeholder="Organisation Name" required>
+            <select required>
+                
+                <option value="Food Bank">Food Bank</option>
+                <option value="Supermarket">Supermarket</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Personal">Personal</option>
+                <!-- Add other organization types as needed -->
+            </select>
+            <select required>
+                
+                <option value="Donor">Donor</option>
+                <option value="Recipient">Recipent</option>
+            </select>
+            <input type="tel" placeholder="Contact Number" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" id="password" name="password" placeholder="Password"required>
+            <input type="password" id="retype-password" name="retype-password" placeholder="re-type Password" required>
+        
+    </div>
+            <label>
+                <input type="checkbox" required>By clicking you agree to the <span class="terms-link" onclick="openModal()">Terms and Conditions</span>
+            </label>
+
+            <!--The Modal-->
+            <div id="termsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>Here are the terms and conditions...</p>
+                    <p>You can write as much content as needed here.</p>
+                </div>
+            </div>
+            
+            <button type="submit"><a href="dashboard.html">Submit</a></button>
+        </form>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("termsModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("termsModal").style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside the modal content
+        window.onclick = function(event) {
+            var modal = document.getElementById("termsModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
